@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Пример80</title>
+</head>
+<body>
+
+<p id="demo">Нажмите на кнопку, чтобы вычислить значение ряда.</p>
+<button onclick="myFunction()">Попробуй это</button>
+
+<script>
+
+function myFunction() 
+{
+var sum=0;
+var x = prompt('Введите x', '');
+var factorial=1;
+
+
+var array = new Array(13);
+for(i=1; i<14; i++)
+{
+factorial=factorial*i;
+array[i]=factorial;
+}
+alert(array);
+for(i=1; i<14; i=i+2)   sum=sum+Math.pow(-1,i+1)*Math.pow(x,i)/array[i];
+alert(sum);
+}
+</script>
+</body>
+</html>
